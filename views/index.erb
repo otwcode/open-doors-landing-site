@@ -1,0 +1,13 @@
+<html>
+<head>
+  <title>Open Doors</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</head>
+<body class="container">
+<h1>Open Doors Temp Sites</h1>
+<% @site_infos.each do |site| %>
+  <p><a href="<%= site[:sitekey] %>/"><%= site[:name] %></a></p>
+<% end %>
+</body>
+</html>

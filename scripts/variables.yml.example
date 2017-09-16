@@ -1,0 +1,7 @@
+repo_version: << Github branch, hash, tag, or HEAD to use as source for deployed site >>
+
+remote_user: << user on remote site >>
+remote_group: << user's group on remote site >>
+remote_path: << remote path to root folder for websites >>
+
+local_ssh_path: << path to the public key to add to authorised keys on the server >>
