@@ -16,3 +16,11 @@ of the site you're creating.
 $ cd <root of this repo>
 $ ansible-playbook scripts/deploy-site.yml -i scripts/hosts --extra-vars "@scripts/variables.yml"
 ```
+
+# Run locally
+
+```bash
+gem install bundler:1.15.3
+bundle install
+rackup -o 0.0.0.0 -p 9292 config.ru
+```
