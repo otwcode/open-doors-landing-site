@@ -50,16 +50,11 @@
       path: "{{ deploy_path }}/.git"
       state: absent
 
-  # Install
-  - name: Update bundle
-    command: bundle update
-    args:
-      chdir: "{{ deploy_path }}"
-
   - name: Install bundle
-    command: bundle install --deployment --path={{ remote_path }}/bundler/{{ sitekey }}
+    command: /usr/share/rvm/gems/ruby-2.7.3/wrappers/bundle install --deployment --path={{ remote_path }}/bundler/{{ sitekey }}
     args:
       chdir: "{{ deploy_path }}"
+    become: false
 
   # Create folders
   - name: Create log, pid and socket folders for Unicorn
